@@ -1,0 +1,273 @@
+SUNFLOWER SCHOOL - SANITY DASHBOARD GUIDE 
+
+URL for dashboard - https://sunflowerpublic.sanity.studio/
+
+Purpose
+- This guide helps you add and manage website content in the Sanity dashboard.
+- It also explains how to create different datasets (for example: production and testing).
+- No coding knowledge is required for content editing.
+
+----------------------------------------------------------------
+1) QUICK START: ADD OR EDIT CONTENT
+----------------------------------------------------------------
+1. Open your Sanity Studio dashboard in browser.
+2. Sign in.
+3. In the left sidebar, click the content type you want (for example: Hero Slide, Event Item).
+4. To add a new item, click "Create new".
+5. Fill fields.
+6. Click "Publish" (top-right) to make it live.
+7. To edit existing content, open the item, change fields, then click "Publish" again.
+
+Important
+- "Draft" = saved but not live.
+- "Published" = visible on the website.
+- If you forget to publish, website may still show old content.
+
+----------------------------------------------------------------
+2) HOW TO USE DIFFERENT DATASETS (PRODUCTION / TESTING)
+----------------------------------------------------------------
+What is a dataset?
+- A dataset is a separate content database inside the same Sanity project.
+- Example:
+  - production = real live content
+  - staging or testing = trial content
+
+Create a new dataset (one-time setup)
+1. Open Sanity project management page.
+2. Go to API settings and open Datasets.
+3. Click "Create dataset".
+4. Enter dataset name (example: staging, testing).
+5. Choose visibility (private/public) as instructed by your team.
+6. Save.
+
+Very important
+- Creating a dataset does NOT automatically switch your website to that dataset.
+- A developer must update project environment setting: NEXT_PUBLIC_SANITY_DATASET.
+- If you only manage content, use the dataset your team confirms for live updates.
+
+Safe workflow recommendation
+1. Edit content in testing/staging dataset.
+2. Review.
+3. Repeat changes in production dataset when approved.
+
+----------------------------------------------------------------
+3) FIELD GUIDE - WHAT EACH CONTENT TYPE MEANS
+----------------------------------------------------------------
+The following content types are active in your current setup.
+
+===============================================================
+A) HERO SLIDE
+Used for the homepage top slider.
+
+Fields
+- Internal Title (required)
+  - Internal name for admin use (not main headline for visitors).
+  - Max 80 characters.
+- Heading (required)
+  - Main large text shown on slide.
+  - Max 120 characters.
+- Subheading (optional)
+  - Supporting text under heading.
+  - Max 240 characters.
+- Background Image (required)
+  - Main slide image.
+- Background Image -> Alt Text (recommended)
+  - Text description for accessibility/screen readers.
+  - Max 160 characters.
+- Badge Text (optional)
+  - Small badge label on slide (if empty, badge is hidden).
+  - Max 80 characters.
+- Primary Button (optional)
+  - Main action button on slide.
+- Secondary Button (optional)
+  - Secondary action button.
+- Display Order (required)
+  - Controls sequence (0 first, then 1, 2, 3...).
+- Active (toggle)
+  - ON = slide can appear on website.
+  - OFF = hidden from website.
+
+Primary/Secondary Button fields
+- Label
+  - Button text shown to visitors.
+- Destination
+  - Where button should go (choose from list).
+- Open In New Tab
+  - ON = opens new browser tab.
+
+Rule for buttons
+- Fill BOTH Label and Destination.
+- Or leave BOTH empty.
+
+===============================================================
+B) SCHOOL UPDATE ITEM
+Used for Updates pages/sections (news and activity style updates).
+
+Fields
+- Title (required)
+  - Headline of update.
+  - Max 140 characters.
+- Slug (required)
+  - URL-friendly text generated from title.
+  - Keep unique.
+- Published At (required)
+  - Date/time shown as publish date.
+- Update Kind (required)
+  - News or Activity.
+- Category (required)
+  - Academic, Sports, Culture, Admission, General.
+- Excerpt (required)
+  - Short summary preview.
+  - Max 260 characters.
+- Cover Image (required)
+  - Main update image.
+- Cover Image -> Alt Text (required)
+  - Accessibility description.
+  - Max 160 characters.
+- Body
+  - Full content area.
+  - You can add text blocks and images.
+- Body Image -> Alt Text (optional but recommended)
+  - Accessibility description for body image.
+- Body Image -> Caption (optional)
+  - Small label under body image.
+  - Max 180 characters.
+- Feature In School Updates (toggle)
+  - ON = prioritized in featured update lists.
+
+===============================================================
+C) EVENT ITEM
+Used for upcoming and past events.
+
+Fields
+- Title (required)
+  - Event name.
+  - Max 140 characters.
+- Start Date (required)
+  - Event start date.
+- End Date (optional)
+  - Use only for multi-day events.
+  - Must be same or after Start Date.
+- Start Time (optional)
+  - Example: 9:00 AM.
+- End Time (optional)
+  - Example: 1:00 PM.
+- Venue (optional)
+  - Place/location.
+  - Max 120 characters.
+- Type (required)
+  - Academic, Sports, Culture, Admission, Camp, General.
+- Summary (optional)
+  - Short event description.
+  - Max 260 characters.
+
+===============================================================
+D) GALLERY ITEM
+Used for photo/video gallery and homepage gallery preview.
+
+Fields
+- Internal Title (optional)
+  - Internal admin name.
+  - Max 120 characters.
+- Media Type (required)
+  - Image or Video.
+- Image
+  - Required only when Media Type = Image.
+- Image -> Alt Text
+  - Accessibility text for image.
+  - Max 160 characters.
+- Video URL
+  - Required only when Media Type = Video.
+  - Accepts YouTube/Vimeo/public MP4 URL.
+- Category (required)
+  - Academics, Sports, Culture, Infrastructure, Events, General.
+- Caption (optional)
+  - Short text shown with media.
+  - Max 120 characters.
+- Event Date (optional)
+  - Date linked to gallery item.
+- Show In Homepage Preview (toggle)
+  - ON = eligible for homepage gallery section.
+- Display Order
+  - Lower number appears first.
+
+===============================================================
+E) TEAM MEMBER
+Used for leadership, teaching staff, and management sections.
+
+Fields
+- Name (required)
+  - Person full name.
+  - Max 80 characters.
+- Role (required)
+  - Job title/designation.
+  - Max 120 characters.
+- Member Type (required)
+  - Leadership / Teaching Staff / Management.
+- Photo (required)
+  - Member photo.
+- Photo -> Alt Text (required)
+  - Accessibility description.
+  - Max 160 characters.
+- Bio (conditional)
+  - Mainly for Leadership type.
+- Specialisation (conditional)
+  - Mainly for non-Leadership types.
+- Email (optional)
+  - Must be valid email format.
+- LinkedIn URL (optional)
+  - Full LinkedIn profile link.
+- Featured (toggle)
+  - Marks member as featured (if used by design).
+- Display Order (required)
+  - Controls order (0 first).
+
+===============================================================
+F) SITE SETTINGS
+Used for global contact routing.
+
+Fields
+- Title (required)
+  - Internal settings title (usually keep default: Global Settings).
+  - Max 80 characters.
+- Admission Recipient Email (required)
+  - Admission inquiry form emails go here.
+- Career Recipient Email (required)
+  - Career application form emails go here.
+
+Best practice
+- Keep only one main Site Settings document unless your team says otherwise.
+
+----------------------------------------------------------------
+4) QUALITY CHECKLIST BEFORE PUBLISHING
+----------------------------------------------------------------
+- Did you click Publish?
+- Required fields filled (no validation warning).
+- Image alt text added where possible.
+- Dates and times checked.
+- Display Order numbers reviewed.
+- Featured toggles set intentionally.
+- Slug looks correct for update pages.
+
+----------------------------------------------------------------
+5) TROUBLESHOOTING (NON-TECHNICAL)
+----------------------------------------------------------------
+Issue: Content not showing on website
+- Check item is Published (not only Draft).
+- Check Active / Featured toggle if relevant.
+- Check date/time (future date may affect listing).
+- Check you are editing the correct dataset.
+
+Issue: Button not visible on Hero Slide
+- Ensure both Label and Destination are filled.
+
+Issue: Validation error when publishing
+- Open highlighted field and complete required info.
+- Character limits may be exceeded.
+
+----------------------------------------------------------------
+6) NOTE ABOUT OTHER SCHEMAS IN CODE
+----------------------------------------------------------------
+Your codebase also contains "News Item" and "Activity Item" schema files, but they are currently not included in active schema registration list. If needed later, ask your developer to enable them in schemaTypes index.
+
+End of guide.
