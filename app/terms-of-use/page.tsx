@@ -155,10 +155,10 @@ export default function TermsOfUsePage() {
               For any questions regarding these Terms of Use, please contact
               Devarshi Vidhyalaya at{" "}
               <a
-                href="mailto:info@devarshividhyalaya.com"
+                href="mailto:devarshividhyalaya@gmail.com"
                 className="text-[oklch(0.36_0.13_25)] hover:underline"
               >
-                info@devarshividhyalaya.com
+                devarshividhyalaya@gmail.com
               </a>
               .
             </p>

@@ -26,12 +26,12 @@ const socialLinks = [
   {
     icon: Facebook,
     label: "Facebook",
-    href: "https://www.facebook.com/devarshividhyalaya",
+    href: "https://www.facebook.com/devarshi_vidhyalay",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/devarshividhyalaya",
+    href: "https://www.instagram.com/devarshi_vidhyalay",
   },
   {
     icon: Youtube,
@@ -138,12 +138,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@devarshividhyalaya.com"
+                  href="mailto:devarshividhyalaya@gmail.com"
                   className="flex items-start gap-3 text-white/60 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4 shrink-0 mt-0.5 text-[oklch(0.76_0.13_80)]" />
                   <span className="text-sm break-all">
-                    info@devarshividhyalaya.com
+                    devarshividhyalaya@gmail.com
                   </span>
                 </a>
               </li>

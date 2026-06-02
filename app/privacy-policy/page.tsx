@@ -138,10 +138,10 @@ export default function PrivacyPolicyPage() {
               For privacy-related questions, please contact Devarshi Public
               School at{" "}
               <a
-                href="mailto:info@devarshividhyalaya.com"
+                href="mailto:devarshividhyalaya@gmail.com"
                 className="text-[oklch(0.36_0.13_25)] hover:underline"
               >
-                info@devarshividhyalaya.com
+                devarshividhyalaya@gmail.com
               </a>
               .
             </p>

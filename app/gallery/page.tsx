@@ -25,8 +25,8 @@ const fallbackGalleryImages = [
 ]
 
 const gallerySocialLinks = [
-  { label: 'Facebook', href: 'https://www.facebook.com/devarshividhyalaya' },
-  { label: 'Instagram', href: 'https://www.instagram.com/devarshividhyalaya' },
+  { label: 'Facebook', href: 'https://www.facebook.com/devarshi_vidhyalay' },
+  { label: 'Instagram', href: 'https://www.instagram.com/devarshi_vidhyalay' },
   { label: 'YouTube', href: 'https://www.youtube.com/@devarshividhyalaya' },
 ]
 

@@ -82,7 +82,7 @@ export default function ManagementSection({
                   </p>
                   <div className="flex gap-3 mt-4">
                     <a
-                      href={`mailto:${person.email || "info@devarshividhyalaya.com"}`}
+                      href={`mailto:${person.email || "devarshividhyalaya@gmail.com"}`}
                       aria-label={`Email ${person.name}`}
                       className="p-2 rounded-lg bg-[oklch(0.92_0.04_25)] hover:bg-[oklch(0.36_0.13_25)] hover:text-white text-[oklch(0.36_0.13_25)] transition-colors"
                     >

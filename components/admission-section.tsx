@@ -563,11 +563,11 @@ export default function AdmissionSection() {
                   +91 75749 06163
                 </a>
                 <a
-                  href="mailto:info@devarshividhyalaya.com"
+                  href="mailto:devarshividhyalaya@gmail.com"
                   className="flex items-center gap-2 text-white/80 hover:text-white text-sm transition-colors break-all"
                 >
                   <Mail className="w-4 h-4 shrink-0" />
-                  info@devarshividhyalaya.com
+                  devarshividhyalaya@gmail.com
                 </a>
               </div>
             </div>
