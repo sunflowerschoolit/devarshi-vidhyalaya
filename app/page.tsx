@@ -105,7 +105,7 @@ export default async function Home() {
               (item.mediaType === 'image' && item.imageUrl) ||
               (item.mediaType === 'video' && item.videoUrl),
           )
-          .slice(0, 6)
+          .slice(0, 12)
           .map((item) => ({
             mediaType: item.mediaType,
             src: item.imageUrl,
