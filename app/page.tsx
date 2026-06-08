@@ -126,6 +126,7 @@ export default async function Home() {
             bio: person.bio || '',
             featured: person.featured,
             email: person.email,
+            phone: person.phone,
             linkedinUrl: person.linkedinUrl,
           }))
       : undefined

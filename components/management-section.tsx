@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Phone } from "lucide-react";
 
 type LeadershipPerson = {
   name: string;
@@ -8,6 +8,7 @@ type LeadershipPerson = {
   bio: string;
   featured?: boolean;
   email?: string;
+  phone?: string;
   linkedinUrl?: string;
 };
 
@@ -50,7 +51,7 @@ export default function ManagementSection({
         </div>
 
         {/* Leadership Cards */}
-        <div className="flex flex-wrap justify-center gap-8 lg:flex-row flex-col items-center">
+        <div className="flex flex-wrap justify-center gap-8 lg:flex-row flex-col items-center lg:items-stretch">
           {leadershipData.map((person) => (
             <div
               key={person.name}
@@ -80,22 +81,42 @@ export default function ManagementSection({
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {person.bio}
                   </p>
-                  <div className="flex gap-3 mt-4">
-                    <a
-                      href={`mailto:${person.email || "devarshividhyalaya@gmail.com"}`}
-                      aria-label={`Email ${person.name}`}
-                      className="p-2 rounded-lg bg-[oklch(0.92_0.04_25)] hover:bg-[oklch(0.36_0.13_25)] hover:text-white text-[oklch(0.36_0.13_25)] transition-colors"
-                    >
-                      <Mail className="w-4 h-4" />
-                    </a>
-                    <a
-                      href={person.linkedinUrl || "#"}
-                      aria-label={`${person.name} on LinkedIn`}
-                      className="p-2 rounded-lg bg-[oklch(0.92_0.04_25)] hover:bg-[oklch(0.36_0.13_25)] hover:text-white text-[oklch(0.36_0.13_25)] transition-colors"
-                    >
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                  </div>
+                  {(person.phone || person.email || person.linkedinUrl) && (
+                    <div className="flex flex-col gap-2 mt-4">
+                      {person.phone && (
+                        <a
+                          href={`tel:${person.phone}`}
+                          aria-label={`Call ${person.name}`}
+                          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-[oklch(0.36_0.13_25)] transition-colors"
+                        >
+                          <Phone className="w-4 h-4 shrink-0 text-[oklch(0.36_0.13_25)]" />
+                          <span>{person.phone}</span>
+                        </a>
+                      )}
+                      {person.email && (
+                        <a
+                          href={`mailto:${person.email}`}
+                          aria-label={`Email ${person.name}`}
+                          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-[oklch(0.36_0.13_25)] transition-colors"
+                        >
+                          <Mail className="w-4 h-4 shrink-0 text-[oklch(0.36_0.13_25)]" />
+                          <span className="break-all">{person.email}</span>
+                        </a>
+                      )}
+                      {person.linkedinUrl && (
+                        <a
+                          href={person.linkedinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${person.name} on LinkedIn`}
+                          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-[oklch(0.36_0.13_25)] transition-colors"
+                        >
+                          <Linkedin className="w-4 h-4 shrink-0 text-[oklch(0.36_0.13_25)]" />
+                          <span>LinkedIn</span>
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

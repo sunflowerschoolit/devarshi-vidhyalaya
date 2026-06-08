@@ -68,6 +68,7 @@ export type TeamMember = {
   bio?: string
   specialisation?: string
   email?: string
+  phone?: string
   linkedinUrl?: string
   featured: boolean
   order: number

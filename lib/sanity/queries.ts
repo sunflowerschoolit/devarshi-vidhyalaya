@@ -129,6 +129,7 @@ export const teamMembersQuery = `
   bio,
   specialisation,
   email,
+  phone,
   linkedinUrl,
   featured,
   order,

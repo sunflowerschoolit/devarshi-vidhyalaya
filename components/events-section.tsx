@@ -103,13 +103,10 @@ export default function EventsSection({
                   key={`${item.kind}-${item.title}`}
                   className="group flex gap-5 bg-card border border-border rounded-2xl p-5 hover:border-[oklch(0.36_0.13_25)]/40 hover:shadow-lg transition-all duration-300"
                 >
-                  <div
-                    className="relative hidden sm:block shrink-0 w-24 h-24 rounded-xl overflow-hidden"
-                    aria-hidden="true"
-                  >
+                  <div className="relative shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden">
                     <img
                       src={item.image}
-                      alt=""
+                      alt={item.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
